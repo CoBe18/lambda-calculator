@@ -1,12 +1,26 @@
 import React from "react";
+import styled from 'styled-components'
 
-const OperatorButton = (pros) => {
-  const {operator} = pros;
+const Button = styled.button`
+background-color: #247292;
+`
+
+const OperatorButton = (props) => {
   return (
-    <div className='operatorButton'>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-      <button> {operator} </button>
-    </div>
+    <>
+      <Button className='button'>
+        {props.k.char}
+      </Button>
+    </>
   );
 };
-export default OperatorButton;
+export default OperatorButton; 
+import React from "react";
+
+const OperatorButton = () => {
+  return (
+    <>
+      {/* Display a button element rendering the data being passed down from the parent container on props */}
+    </>
+  );
+};

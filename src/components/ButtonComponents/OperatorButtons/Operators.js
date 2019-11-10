@@ -1,21 +1,29 @@
 //import any components needed
-import React, {useState} from "react";
-import {operators} from "/Users/red/Desktop/lambda/projects/lambda-calculator/src/data"
-import OperatorButton from "./OperatorButton";
+import React, { useState } from "react";
+import { operators } from '../../../data'
+import OperatorButton from './OperatorButton'
 
 //Import your array data to from the provided data file
 
 const Operators = () => {
+  const [operButton, setOperButton] = useState(operators)
+
   // STEP 2 - add the imported data to state
-  const [operatorsState, setOperationsState] = useState(operators);
-  return (
-    <div className='operators'>
+  
+  
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-       {operators.map((x,i) => <OperatorButton key={i} operator={x.value} />)}
-    </div>
-  );
-};
+       
+       return (
+        <div>
+          
+          {operButton.map((k, index) => {
+           return <OperatorButton key={index} k={k} />
+          })}
+    
+        </div>
+      );
+    };
+    export default Operators;
 
-export default Operators;

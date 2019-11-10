@@ -1,14 +1,9 @@
 import React from "react";
 
-// const tempDisplayValue = 999;
-
 const Display = (props) => {
+  console.log("Display", props, props.number);
 
-  const {displayValue} = props;
-
-  return <div>{/* Display any props data here */}
-  {displayValue}
-  </div>;
+  return <div className="display">{props.number}</div>;
 };
 
 export default Display;
