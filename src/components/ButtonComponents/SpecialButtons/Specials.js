@@ -1,23 +1,23 @@
 //import any components needed
-import React, { useState } from "react";
-import { specials } from '../../../data'
-import SpecialButton from './SpecialButton'
+import React from 'react';
+
+import '../../../styles/specials.scss';
+
+//import any components needed
+import SpecialButton from './SpecialButton';
+
 //Import your array data to from the provided data file
+import { specials } from '../../../data';
 
-const Specials = () => {
-  const [specNum, setSpecNum] = useState(specials)
-
-
-  // STEP 2 - add the imported data to state
+function Specials() {
   
   return (
-    <div>
-    
-      {specNum.map((j, index) => (
-        <SpecialButton key={index} j={j} />
+    <div id="specials">
+      {specials.map((i, k) => (
+        <SpecialButton key={k} s={i} />
       ))}
-
     </div>
   );
-};
+}
+
 export default Specials;

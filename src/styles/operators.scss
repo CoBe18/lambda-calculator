@@ -1,0 +1,22 @@
+#operators {
+   
+}
+
+#operator-btn {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2a7293;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+  h1 {
+    padding: 30px;
+    color: #fff;
+  }
+}

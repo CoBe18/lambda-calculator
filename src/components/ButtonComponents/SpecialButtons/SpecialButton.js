@@ -1,5 +1,19 @@
-import React from "react";
-import styled from 'styled-components';
+import React from 'react';
+import '../../../styles/specials.scss';
 
-const Button = styled.button`
-background-color: #225c9d;
+function SpecialButton(props) {
+  const handleClick = e => {
+    const display = document.getElementsByClassName('display')[0];
+    const spec = document.getElementById('currSpec');
+    spec.innerHTML === 'C'
+      ? (display.innerHTML = '')
+      : (display.innerHTML = 'um...no');
+  };
+  return (
+    <div onClick={handleClick} id="special-btn">
+      <h1 id="currSpec">{props.s}</h1>
+    </div>
+  );
+}
+
+export default SpecialButton;
