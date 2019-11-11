@@ -1,0 +1,26 @@
+#numbers {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  border-radius: 50%;
+}
+
+#number-btn {
+  width: 25%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #18437a;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all 100ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.04);
+  }
+  h1 {
+    padding: 25px;
+    color: #fff;
+  }
+}

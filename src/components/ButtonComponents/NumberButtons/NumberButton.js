@@ -1,9 +1,18 @@
-import React from "react";
+//import any components needed
+import React from 'react';
 
-const NumberButton = () => {
+function NumberButton(props) {
+  const handleClick = () => {
+    const display = document.getElementsByClassName('display')[0];
+    display.innerHTML === '0'
+      ? (display.innerHTML = '' + props.numbers)
+      : (display.innerHTML += props.numbers);
+  };
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <div id="number-btn">
+      <h1 onClick={handleClick}>{props.numbers}</h1>
+    </div>
   );
-};
+}
+
+export default NumberButton;
